@@ -2,7 +2,7 @@
 
 // Check for Palindromes
 
-function palindrome(str) {
+const palindrome = str => {
   str = str.replace(/[^0-9a-z]/gi, '').toLowerCase()
 
   if (
@@ -42,3 +42,20 @@ const titleCase = str =>
 
 console.log(titleCase("I'm a little tea pot"))
 console.log(titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'))
+
+// Return largest numbers in arrays
+
+const largestOfFour = arr => {
+  return arr.map(el =>
+    el.reduce((longest, currentNumber) => Math.max(longest, currentNumber))
+  )
+}
+
+console.log(
+  largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1]
+  ])
+)
