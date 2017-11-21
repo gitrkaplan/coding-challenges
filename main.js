@@ -66,3 +66,9 @@ const confirmEnding = (str, target) => str.substr(-target.length) === target
 
 console.log(confirmEnding('Bastian', 'n'))
 console.log(confirmEnding('He has to give me a new name', 'name'))
+
+// Repeat a string repeat a string
+
+const repeatStringNumTimes = (str, num) => (num > 0 ? str.repeat(num) : '')
+
+console.log(repeatStringNumTimes('abc', 3))
