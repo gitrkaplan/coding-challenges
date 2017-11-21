@@ -23,7 +23,7 @@ console.log(palindrome('A man, a plan, a canal. Panama'))
 // Find longest word in a string
 
 const findLongestWord = str => {
-  var longestWord = str.split(' ').reduce((longest, currentWord) => {
+  const longestWord = str.split(' ').reduce((longest, currentWord) => {
     return currentWord.length > longest.length ? currentWord : longest
   }, '')
   return longestWord.length
