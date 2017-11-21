@@ -59,3 +59,10 @@ console.log(
     [1000, 1001, 857, 1]
   ])
 )
+
+// Confirm the ending
+
+const confirmEnding = (str, target) => str.substr(-target.length) === target
+
+console.log(confirmEnding('Bastian', 'n'))
+console.log(confirmEnding('He has to give me a new name', 'name'))
