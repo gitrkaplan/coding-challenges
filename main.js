@@ -30,3 +30,15 @@ const findLongestWord = str => {
 }
 
 console.log(findLongestWord('The quick brown fox jumped over the lazy dog'))
+
+// Title case a sentence
+
+const titleCase = str =>
+  str
+    .toLowerCase()
+    .split(' ')
+    .map(el => el.charAt(0).toUpperCase() + el.slice(1))
+    .join(' ')
+
+console.log(titleCase("I'm a little tea pot"))
+console.log(titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'))
