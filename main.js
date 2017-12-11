@@ -90,3 +90,17 @@ console.log(
     'A-tisket a-tasket A green and yellow basket'.length
   )
 )
+
+// jshint esversion:6
+
+// Chunky Monkey
+
+const chunkArrayInGroups = (arr, size) => {
+  const newArr = []
+  while (arr.length) {
+    newArr.push(arr.splice(0, size))
+  }
+  return newArr
+}
+
+console.log(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2))
