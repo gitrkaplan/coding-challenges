@@ -104,3 +104,10 @@ const chunkArrayInGroups = (arr, size) => {
 }
 
 console.log(chunkArrayInGroups(['a', 'b', 'c', 'd'], 2))
+
+// Slasher Flick
+
+const slasher = (arr, howMany) => arr.slice(howMany)
+
+console.log(slasher([1, 2, 3], 2))
+console.log(slasher(['burgers', 'fries', 'shake'], 1))
