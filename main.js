@@ -72,3 +72,21 @@ console.log(confirmEnding('He has to give me a new name', 'name'))
 const repeatStringNumTimes = (str, num) => (num > 0 ? str.repeat(num) : '')
 
 console.log(repeatStringNumTimes('abc', 3))
+
+// Truncate a string
+
+const truncateString = (str, num) =>
+  str.length <= num
+    ? str
+    : num <= 3
+      ? str.slice(0, num) + '.'.repeat(3)
+      : str.slice(0, num - 3) + '.'.repeat(3)
+
+console.log(truncateString('A-tisket a-tasket A green and yellow basket', 11))
+console.log(truncateString('A-', 1))
+console.log(
+  truncateString(
+    'A-tisket a-tasket A green and yellow basket',
+    'A-tisket a-tasket A green and yellow basket'.length
+  )
+)
