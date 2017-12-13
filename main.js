@@ -121,6 +121,20 @@ const mutation = arr => {
   }
   return true
 }
+//
+// console.log(mutation(['hello', 'hey']))
+// console.log(mutation(['Alien', 'line']))
 
-console.log(mutation(['hello', 'hey']))
-console.log(mutation(['Alien', 'line']))
+// Falsy Bouncer
+
+function bouncer(arr) {
+  let truthy = []
+  arr.forEach(el => {
+    if (el) {
+      truthy.push(el)
+    }
+  })
+  return truthy
+}
+
+console.log(bouncer([7, 'ate', '', false, 9]))
