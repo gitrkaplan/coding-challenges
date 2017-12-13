@@ -111,3 +111,16 @@ const slasher = (arr, howMany) => arr.slice(howMany)
 
 console.log(slasher([1, 2, 3], 2))
 console.log(slasher(['burgers', 'fries', 'shake'], 1))
+
+// Mutations
+
+function mutation(arr) {
+  for (var i = 0; i <= arr[1].length - 1; i++) {
+    if (arr[0].toLowerCase().indexOf(arr[1][i].toLowerCase()) === -1)
+      return false
+  }
+  return true
+}
+
+console.log(mutation(['hello', 'hey']))
+console.log(mutation(['Alien', 'line']))
