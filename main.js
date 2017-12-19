@@ -138,3 +138,35 @@ function bouncer(arr) {
 }
 
 console.log(bouncer([7, 'ate', '', false, 9]))
+
+// Seek and Destroy
+
+const destroyer = arr => {
+  const args = [...arguments].slice(1)
+  return arguments[0].filter(num => {
+    if (!args.includes(num)) {
+      return num
+    }
+  })
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+// console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53))
+
+// FizzBuzz
+
+const fizzBuzz = () => {
+  for (let i = 1; i < 101; i++) {
+    if (i % 15 === 0) {
+      console.log('FizzBuzz')
+    } else if (i % 3 === 0) {
+      console.log('Fizz')
+    } else if (i % 5 === 0) {
+      console.log('Buzz')
+    } else {
+      console.log(i)
+    }
+  }
+}
+
+fizzBuzz()
