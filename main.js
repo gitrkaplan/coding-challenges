@@ -170,3 +170,21 @@ const fizzBuzz = () => {
 }
 
 fizzBuzz()
+
+// Where Do I Belong?
+
+function getIndexToIns(arr, num) {
+  var sorted = arr.sort(function(a, b) {
+    return a - b
+  })
+  for (var i = 0; i < sorted.length; i++) {
+    if (sorted[i] >= num) {
+      return i
+    }
+  }
+  if (num > arr[arr.length - 1]) {
+    return arr.length
+  }
+}
+
+console.log(getIndexToIns([40, 60], 50))
