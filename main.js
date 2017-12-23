@@ -141,17 +141,17 @@ console.log(bouncer([7, 'ate', '', false, 9]))
 
 // Seek and Destroy
 
-// const destroyer = arr => {
-//   const args = [...arguments].slice(1)
-//   return arguments[0].filter(num => {
-//     if (!args.includes(num)) {
-//       return num
-//     }
-//   })
-// }
-//
-// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
-// // console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53))
+const destroyer = arr => {
+  const args = [...arguments].slice(1)
+  return arguments[0].filter(el => {
+    if (!args.includes(el)) {
+      return el
+    }
+  })
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+// console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53))
 
 // FizzBuzz
 
