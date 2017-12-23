@@ -141,12 +141,10 @@ console.log(bouncer([7, 'ate', '', false, 9]))
 
 // Seek and Destroy
 
-const destroyer = arr => {
-  const args = [...arguments].slice(1)
-  return arguments[0].filter(el => {
-    if (!args.includes(el)) {
-      return el
-    }
+function destroyer(arr) {
+  var args = Array.from(arguments).slice(1)
+  return arr.filter(function(val) {
+    return !args.includes(val)
   })
 }
 
