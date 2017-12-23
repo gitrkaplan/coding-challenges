@@ -141,17 +141,17 @@ console.log(bouncer([7, 'ate', '', false, 9]))
 
 // Seek and Destroy
 
-const destroyer = arr => {
-  const args = [...arguments].slice(1)
-  return arguments[0].filter(num => {
-    if (!args.includes(num)) {
-      return num
-    }
-  })
-}
-
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
-// console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53))
+// const destroyer = arr => {
+//   const args = [...arguments].slice(1)
+//   return arguments[0].filter(num => {
+//     if (!args.includes(num)) {
+//       return num
+//     }
+//   })
+// }
+//
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+// // console.log(destroyer(['tree', 'hamburger', 53], 'tree', 53))
 
 // FizzBuzz
 
@@ -188,3 +188,13 @@ function getIndexToIns(arr, num) {
 }
 
 console.log(getIndexToIns([40, 60], 50))
+
+// Caesars Cipher
+
+const rot13 = str =>
+  str.replace(/[A-Z]/g, letter =>
+    String.fromCharCode(letter.charCodeAt(0) % 26 + 65)
+  )
+
+console.log(rot13('SERR PBQR PNZC'))
+console.log(rot13('GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.'))
